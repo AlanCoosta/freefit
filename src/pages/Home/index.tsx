@@ -1,25 +1,26 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
-import { FiMapPin, FiChevronRight, FiMenu, FiX } from 'react-icons/fi';
-import { MdDirectionsRun } from 'react-icons/md';
-import { GiTakeMyMoney, GiWeightLiftingUp } from 'react-icons/gi';
+import { FiMenu, FiX } from 'react-icons/fi';
+// import { FiMapPin, FiChevronRight, FiMenu, FiX } from 'react-icons/fi';
+// import { MdDirectionsRun } from 'react-icons/md';
+// import { GiTakeMyMoney, GiWeightLiftingUp } from 'react-icons/gi';
 
-import Carousel from 'react-multi-carousel';
+// import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
 import Logo from '../../assets/logo.svg';
 import WomanFitness from '../../assets/fitness.png';
-import AboutImage from '../../assets/about.jpeg';
-import Mini from '../../assets/mini.jpeg';
-import Midi from '../../assets/midi.jpeg';
-import Maxi from '../../assets/maxi.jpeg';
-import Gym1 from '../../assets/gym1.jpeg';
-import Gym2 from '../../assets/gym2.jpeg';
-import Gym3 from '../../assets/gym3.jpeg';
-import Gym4 from '../../assets/gym4.jpeg';
-import client1 from '../../assets/client1.jpg';
-import client2 from '../../assets/client2.jpg';
-import client3 from '../../assets/client3.jpg';
+// import AboutImage from '../../assets/about.jpeg';
+// import Mini from '../../assets/mini.jpeg';
+// import Midi from '../../assets/midi.jpeg';
+// import Maxi from '../../assets/maxi.jpeg';
+// import Gym1 from '../../assets/gym1.jpeg';
+// import Gym2 from '../../assets/gym2.jpeg';
+// import Gym3 from '../../assets/gym3.jpeg';
+// import Gym4 from '../../assets/gym4.jpeg';
+// import client1 from '../../assets/client1.jpg';
+// import client2 from '../../assets/client2.jpg';
+// import client3 from '../../assets/client3.jpg';
 
 import * as S from './styles';
 
