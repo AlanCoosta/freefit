@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react';
-import { FiMapPin, FiChevronRight } from 'react-icons/fi';
+import React, { useState } from 'react';
+import { FiMapPin, FiChevronRight, FiMenu, FiX } from 'react-icons/fi';
 import { MdDirectionsRun } from 'react-icons/md';
 import { GiTakeMyMoney, GiWeightLiftingUp } from 'react-icons/gi';
 
@@ -24,64 +24,95 @@ import client3 from '../../assets/client3.jpg';
 import * as S from './styles';
 
 const Home: React.FC = () => {
+  const [modal, setModal] = useState(false);
+
   return (
-    <S.Container>
-      <S.Header>
-        <S.HeaderLeft>
-          <S.Logo>
-            <img src={Logo} alt="Logo" />
-            <S.LogoText>FREE FIT</S.LogoText>
-          </S.Logo>
+    <>
+      <S.Modal className={`${modal ? 'menu-opened' : ''}`}>
+        <header>
+          <FiX size={30} onClick={() => setModal(false)} />
+        </header>
 
-          <S.Menu>
-            <a href="#about">About</a>
-            <a href="#format">Format</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#reviews">Reviews</a>
-            <a>Contact</a>
-          </S.Menu>
-        </S.HeaderLeft>
+        <a href="#about" onClick={() => setModal(false)}>
+          About
+        </a>
 
-        <S.Contacts>
-          <span>(23)99563-0799</span>
-          <a href="#">Order call</a>
-        </S.Contacts>
-      </S.Header>
+        <a href="#format" onClick={() => setModal(false)}>
+          Format
+        </a>
 
-      <S.Box>
-        <S.Franchise id="about">
-          <S.FranchiseText>
-            <h1>FRANCHISE FITNESS CLUB</h1>
+        <a href="#gallery" onClick={() => setModal(false)}>
+          Gallery
+        </a>
 
-            <p>
-              Grow your business under the brand, bringing together the largest
-              chain fitness clubs in Russia
-            </p>
+        <a href="#reviews" onClick={() => setModal(false)}>
+          Reviews
+        </a>
 
-            <button type="button">LEARN MORE</button>
+        <a>Contact</a>
+      </S.Modal>
 
-            <footer>
-              <a href="#">Instagram</a>
-              <a href="#">Facebook</a>
-              <a href="#">Whatsapp</a>
-            </footer>
-          </S.FranchiseText>
+      <S.Container>
+        <S.Header>
+          <S.HeaderLeft>
+            <div>
+              <img src={Logo} alt="Logo" />
+              <h1>FREE FIT</h1>
+            </div>
 
-          <S.FranchiseImage>
-            <img src={WomanFitness} alt="" />
-          </S.FranchiseImage>
+            <div className="menu">
+              <a href="#about">About</a>
+              <a href="#format">Format</a>
+              <a href="#gallery">Gallery</a>
+              <a href="#reviews">Reviews</a>
+              <a>Contact</a>
+            </div>
+          </S.HeaderLeft>
 
-          <S.FranchiseConfortable>
-            <h3>Confortable Solution</h3>
+          <S.Contacts>
+            <span>(23)99563-0799</span>
+            <a href="#">Order call</a>
+          </S.Contacts>
 
-            <p>
-              We offer top open economically profitable sports facility where
-              everything is provided for in detail
-            </p>
-          </S.FranchiseConfortable>
-        </S.Franchise>
-      </S.Box>
+          <S.MenuHamburguer>
+            <FiMenu size={30} onClick={() => setModal(!modal)} />
+          </S.MenuHamburguer>
+        </S.Header>
 
+        <S.Box>
+          <S.Franchise id="about">
+            <S.FranchiseText>
+              <h1>FRANCHISE FITNESS CLUB</h1>
+
+              <p>
+                Grow your business under the brand, bringing together the
+                largest chain fitness clubs in Russia
+              </p>
+
+              <button type="button">LEARN MORE</button>
+
+              <div>
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">Whatsapp</a>
+              </div>
+            </S.FranchiseText>
+
+            <div>
+              <img src={WomanFitness} alt="" />
+            </div>
+
+            <S.FranchiseConfortable>
+              <h3>Confortable Solution</h3>
+
+              <p>
+                We offer top open economically profitable sports facility where
+                everything is provided for in detail
+              </p>
+            </S.FranchiseConfortable>
+          </S.Franchise>
+        </S.Box>
+        {/*
       <S.About>
         <S.AboutContent>
           <S.AboutText>
@@ -411,8 +442,9 @@ const Home: React.FC = () => {
           <span>Privacy Policy</span>
           <span>Design: GABI ABKAROV</span>
         </div>
-      </S.Footer>
-    </S.Container>
+      </S.Footer> */}
+      </S.Container>
+    </>
   );
 };
 

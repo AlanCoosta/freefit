@@ -1,10 +1,12 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.div``;
 
+// HEADER
+
 export const Header = styled.div`
   height: 128px;
-  padding: 0 28px;
+  padding: 0 24px;
 
   display: flex;
   justify-content: space-between;
@@ -14,33 +16,31 @@ export const Header = styled.div`
 export const HeaderLeft = styled.div`
   display: flex;
   align-items: center;
-`;
-
-export const Logo = styled.div`
-  display: flex;
-  align-items: center;
-
-  img {
-    width: 32px;
-  }
-`;
-
-export const LogoText = styled.h1`
-  font-family: 'Bebas Neue', cursive;
-`;
-
-export const Menu = styled.div`
-  display: flex;
 
   @media (max-width: 900px) {
-    display: none;
+    .menu {
+      display: none;
+    }
   }
 
-  a {
-    margin-left: 24px;
-    cursor: pointer;
-    color: #9a9da0;
-    font-weight: 500;
+  div {
+    display: flex;
+    align-items: center;
+
+    h1 {
+      font-family: 'Bebas Neue', cursive;
+    }
+
+    img {
+      width: 32px;
+    }
+
+    a {
+      margin-left: 24px;
+      cursor: pointer;
+      color: #9a9da0;
+      font-weight: 500;
+    }
   }
 `;
 
@@ -65,27 +65,109 @@ export const Contacts = styled.div`
   }
 `;
 
+export const MenuHamburguer = styled.div`
+  display: none;
+
+  svg {
+    cursor: pointer;
+  }
+
+  @media (max-width: 900px) {
+    display: flex;
+  }
+`;
+
+export const Modal = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 4;
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+  color: #000;
+
+  header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 128px;
+    padding: 0 24px;
+  }
+
+  a {
+    margin: 24px 0;
+    cursor: pointer;
+    color: #9a9da0;
+    font-weight: 500;
+  }
+
+  &.menu-opened {
+    transform: translateY(0%);
+    opacity: 1;
+    pointer-events: all;
+    transition: all 0.3s;
+  }
+
+  svg {
+    cursor: pointer;
+  }
+`;
+
+// CORRECT
+
 export const Box = styled.div`
   max-width: 1440px;
   margin: 0 auto;
 `;
 
+// FRANCHISE
+
 export const Franchise = styled.div`
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  text-align: center;
-
-  padding: 0 28px;
+  padding: 0 24px;
+  margin-bottom: 64px;
 
   @media (max-width: 900px) {
     display: block;
   }
+
+  div {
+    width: 100%;
+
+    @media (max-width: 900px) {
+      margin-bottom: 64px;
+    }
+
+    img {
+      width: 100%;
+      max-height: 600px;
+      object-fit: contain;
+    }
+  }
 `;
 
 export const FranchiseText = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   text-align: left;
-  width: 350px;
-  margin-top: 128px;
+
+  @media (max-width: 900px) {
+    align-items: center;
+    text-align: center;
+  }
 
   h1 {
     font-family: 'Bebas Neue', cursive;
@@ -97,6 +179,7 @@ export const FranchiseText = styled.div`
     margin-bottom: 24px;
     letter-spacing: 0.1em;
     line-height: 1.5em;
+    max-width: 350px;
   }
 
   button {
@@ -105,12 +188,17 @@ export const FranchiseText = styled.div`
     border-radius: 26px;
     color: #ffffff;
     font-weight: 500;
+    max-width: 264px;
   }
 
-  footer {
+  div {
     display: flex;
     justify-content: space-between;
     margin-top: 128px;
+
+    @media (max-width: 900px) {
+      display: none;
+    }
 
     a {
       text-decoration: none;
@@ -123,28 +211,24 @@ export const FranchiseText = styled.div`
   }
 `;
 
-export const FranchiseImage = styled.div`
-  img {
-    width: 100%;
-    /* max-height: 800px; */
-  }
-`;
-
 export const FranchiseConfortable = styled.div`
   text-align: left;
-  margin-top: 384px;
-  max-width: 300px;
+  padding: 24px 0;
+  padding-left: 16px;
 
   h3 {
     font-family: 'Bebas Neue', cursive;
   }
 
   p {
+    max-width: 300px;
     margin-top: 24px;
     letter-spacing: 0.1em;
     line-height: 1.5em;
   }
 `;
+
+// ABOUT
 
 export const About = styled.div`
   /* height: 100vh; */
