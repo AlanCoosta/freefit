@@ -1,23 +1,23 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
 
-import { FiMapPin, FiMenu, FiX } from 'react-icons/fi';
+import { FiMapPin, FiMenu, FiX, FiChevronRight } from 'react-icons/fi';
 import { MdDirectionsRun } from 'react-icons/md';
 import { GiTakeMyMoney, GiWeightLiftingUp } from 'react-icons/gi';
 
-// import Carousel from 'react-multi-carousel';
+import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
 import Logo from '../../assets/logo.svg';
 import WomanFitness from '../../assets/fitness.png';
 import AboutImage from '../../assets/about.jpeg';
-// import Mini from '../../assets/mini.jpeg';
-// import Midi from '../../assets/midi.jpeg';
-// import Maxi from '../../assets/maxi.jpeg';
-// import Gym1 from '../../assets/gym1.jpeg';
-// import Gym2 from '../../assets/gym2.jpeg';
-// import Gym3 from '../../assets/gym3.jpeg';
-// import Gym4 from '../../assets/gym4.jpeg';
+import Mini from '../../assets/mini.jpeg';
+import Midi from '../../assets/midi.jpeg';
+import Maxi from '../../assets/maxi.jpeg';
+import Gym1 from '../../assets/gym1.jpeg';
+import Gym2 from '../../assets/gym2.jpeg';
+import Gym3 from '../../assets/gym3.jpeg';
+import Gym4 from '../../assets/gym4.jpeg';
 // import client1 from '../../assets/client1.jpg';
 // import client2 from '../../assets/client2.jpg';
 // import client3 from '../../assets/client3.jpg';
@@ -26,6 +26,7 @@ import * as S from './styles';
 
 const Home: React.FC = () => {
   const [modal, setModal] = useState(false);
+  const imagesGym = [Gym1, Gym2, Gym3, Gym4];
 
   return (
     <>
@@ -168,201 +169,171 @@ const Home: React.FC = () => {
           </S.AboutList>
         </S.About>
 
-        {/*
-      <S.Box>
-        <S.Format id="format">
-          <h1 className="title">Format</h1>
+        <S.Box>
+          <S.Board id="format">
+            <h1 className="title">Format</h1>
 
-          <div className="description">
-            <p>We offer to open economically profitable</p>
+            <div className="description">
+              <p>We offer to open economically profitable</p>
 
-            <p>
-              a sports facility where everything is provided for in every detail
-            </p>
-          </div>
+              <p>
+                a sports facility where everything is provided for in every
+                detail
+              </p>
+            </div>
 
-          <S.CardContainer>
-            <S.Card>
-              <img src={Mini} alt="" />
+            <S.CardContainer>
+              <S.Card>
+                <img src={Mini} alt="" />
 
-              <section>
-                <h1>MINI</h1>
+                <section>
+                  <h1>MINI</h1>
 
-                <p className="area">Area - from 220 m2 to 399 m2</p>
+                  <p className="area">Area - from 220 m2 to 399 m2</p>
 
-                <div className="details">
-                  <p>Personal Manager Assistance</p>
-                  <p>Help in recruiting</p>
-                  <p> Zoning Preparation</p>
-                  <p>Quality control of services</p>
-                </div>
-                <div className="price">
-                  <span>499 990 RUB</span>
+                  <div className="details">
+                    <p>Personal Manager Assistance</p>
+                    <p>Help in recruiting</p>
+                    <p> Zoning Preparation</p>
+                    <p>Quality control of services</p>
+                  </div>
 
-                  <button type="button">
-                    <FiChevronRight />
-                  </button>
-                </div>
-              </section>
-            </S.Card>
+                  <div className="price">
+                    <span>499 990 RUB</span>
 
-            <S.Card>
-              <img src={Midi} alt="" />
+                    <button type="button">
+                      <FiChevronRight />
+                    </button>
+                  </div>
+                </section>
+              </S.Card>
 
-              <section>
-                <h1>MIDI</h1>
+              <S.Card>
+                <img src={Midi} alt="" />
 
-                <p className="area">Area - from 400 m2 to 799 m2</p>
+                <section>
+                  <h1>MIDI</h1>
 
-                <div className="details">
-                  <p>All service in the MINI package</p>
-                  <p>Help in choosing a place</p>
-                  <p>Recommendation for repair and equipment</p>
-                  <p>Quality control of services</p>
-                </div>
-                <div className="price">
-                  <span>699 990 RUB</span>
+                  <p className="area">Area - from 400 m2 to 799 m2</p>
 
-                  <button type="button">
-                    <FiChevronRight />
-                  </button>
-                </div>
-              </section>
-            </S.Card>
+                  <div className="details">
+                    <p>All service in the MINI package</p>
+                    <p>Help in choosing a place</p>
+                    <p>Recommendation for repair and equipment</p>
+                    <p>Quality control of services</p>
+                  </div>
 
-            <S.Card>
-              <img src={Maxi} alt="" />
+                  <div className="price">
+                    <span>699 990 RUB</span>
 
-              <section>
-                <h1>MAXI</h1>
+                    <button type="button">
+                      <FiChevronRight />
+                    </button>
+                  </div>
+                </section>
+              </S.Card>
 
-                <p className="area">Area - from 220 m2 to 399 m2</p>
+              <S.Card>
+                <img src={Maxi} alt="" />
 
-                <div className="details">
-                  <p>Personal Manager Assistance</p>
-                  <p>Help in recruiting</p>
-                  <p>Zoning Preparation</p>
-                  <p>Quality control of services</p>
-                </div>
-                <div className="price">
-                  <span>499 990 RUB</span>
+                <section>
+                  <h1>MAXI</h1>
 
-                  <button type="button">
-                    <FiChevronRight />
-                  </button>
-                </div>
-              </section>
-            </S.Card>
-          </S.CardContainer>
-        </S.Format>
-      </S.Box>
+                  <p className="area">Area - from 220 m2 to 399 m2</p>
 
-      <S.Box>
-        <S.OurClubs id="gallery">
-          <h1 className="title">OUR CLUBS</h1>
+                  <div className="details">
+                    <p>Personal Manager Assistance</p>
+                    <p>Help in recruiting</p>
+                    <p>Zoning Preparation</p>
+                    <p>Quality control of services</p>
+                  </div>
+                  <div className="price">
+                    <span>499 990 RUB</span>
 
-          <div
-            style={{
-              paddingBottom: '30px',
-              position: 'relative',
-            }}
-          >
-            <Carousel
-              additionalTransfrom={0}
-              arrows
-              // autoPlay
-              autoPlaySpeed={3000}
-              centerMode={false}
-              className=""
-              containerClass="container"
-              dotListClass=""
-              draggable
-              focusOnSelect={false}
-              infinite
-              itemClass=""
-              keyBoardControl
-              minimumTouchDrag={80}
-              renderButtonGroupOutside={false}
-              renderDotsOutside
-              responsive={{
-                desktop: {
-                  breakpoint: {
-                    max: 3000,
-                    min: 1024,
-                  },
-                  items: 1,
-                },
-                mobile: {
-                  breakpoint: {
-                    max: 464,
-                    min: 0,
-                  },
-                  items: 1,
-                },
-                tablet: {
-                  breakpoint: {
-                    max: 1024,
-                    min: 464,
-                  },
-                  items: 1,
-                },
+                    <button type="button">
+                      <FiChevronRight />
+                    </button>
+                  </div>
+                </section>
+              </S.Card>
+            </S.CardContainer>
+          </S.Board>
+        </S.Box>
+
+        <S.Box>
+          <S.Board id="gallery">
+            <h1 className="title">OUR CLUBS</h1>
+
+            <div
+              style={{
+                paddingBottom: '30px',
+                position: 'relative',
               }}
-              showDots
-              sliderClass=""
-              slidesToSlide={1}
-              swipeable
             >
-              <img
-                src={Gym1}
-                alt="Gym"
-                style={{
-                  display: 'block',
-                  height: '600px',
-                  margin: 'auto',
-                  width: '100%',
-                  objectFit: 'cover',
+              <Carousel
+                additionalTransfrom={0}
+                arrows
+                // autoPlay
+                autoPlaySpeed={3000}
+                centerMode={false}
+                className=""
+                containerClass="container"
+                dotListClass=""
+                draggable
+                focusOnSelect={false}
+                infinite
+                itemClass=""
+                keyBoardControl
+                minimumTouchDrag={80}
+                renderButtonGroupOutside={false}
+                renderDotsOutside
+                responsive={{
+                  desktop: {
+                    breakpoint: {
+                      max: 3000,
+                      min: 1024,
+                    },
+                    items: 1,
+                  },
+                  mobile: {
+                    breakpoint: {
+                      max: 464,
+                      min: 0,
+                    },
+                    items: 1,
+                  },
+                  tablet: {
+                    breakpoint: {
+                      max: 1024,
+                      min: 464,
+                    },
+                    items: 1,
+                  },
                 }}
-              />
+                showDots
+                sliderClass=""
+                slidesToSlide={1}
+                swipeable
+              >
+                {imagesGym.map((image) => (
+                  <img
+                    src={image}
+                    alt="Gym"
+                    style={{
+                      display: 'block',
+                      height: '600px',
+                      margin: 'auto',
+                      width: '100%',
+                      objectFit: 'cover',
+                    }}
+                  />
+                ))}
+              </Carousel>
+            </div>
+          </S.Board>
+        </S.Box>
 
-              <img
-                src={Gym2}
-                alt="Gym"
-                style={{
-                  display: 'block',
-                  height: '600px',
-                  margin: 'auto',
-                  width: '100%',
-                  objectFit: 'cover',
-                }}
-              />
-
-              <img
-                src={Gym3}
-                alt="Gym"
-                style={{
-                  display: 'block',
-                  height: '600px',
-                  margin: 'auto',
-                  width: '100%',
-                  objectFit: 'cover',
-                }}
-              />
-
-              <img
-                src={Gym4}
-                alt="Gym"
-                style={{
-                  display: 'block',
-                  height: '600px',
-                  margin: 'auto',
-                  width: '100%',
-                  objectFit: 'cover',
-                }}
-              />
-            </Carousel>
-          </div>
-        </S.OurClubs>
-      </S.Box>
+        {/*
 
       <S.Box>
         <S.Clients id="reviews">

@@ -70,3 +70,52 @@
     </div>
   </S.AboutList>
 </S.About>;
+
+
+<S.Card>
+                <img src={Midi} alt="" />
+
+                <section>
+                  <h1>MIDI</h1>
+
+                  <p className="area">Area - from 400 m2 to 799 m2</p>
+
+                  <div className="details">
+                    <p>All service in the MINI package</p>
+                    <p>Help in choosing a place</p>
+                    <p>Recommendation for repair and equipment</p>
+                    <p>Quality control of services</p>
+                  </div>
+                  <div className="price">
+                    <span>699 990 RUB</span>
+
+                    <button type="button">
+                      <FiChevronRight />
+                    </button>
+                  </div>
+                </section>
+              </S.Card>
+
+              <S.Card>
+                <img src={Maxi} alt="" />
+
+                <section>
+                  <h1>MAXI</h1>
+
+                  <p className="area">Area - from 220 m2 to 399 m2</p>
+
+                  <div className="details">
+                    <p>Personal Manager Assistance</p>
+                    <p>Help in recruiting</p>
+                    <p>Zoning Preparation</p>
+                    <p>Quality control of services</p>
+                  </div>
+                  <div className="price">
+                    <span>499 990 RUB</span>
+
+                    <button type="button">
+                      <FiChevronRight />
+                    </button>
+                  </div>
+                </section>
+              </S.Card>

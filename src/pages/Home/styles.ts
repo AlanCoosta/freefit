@@ -349,185 +349,191 @@ export const AboutList = styled.div`
   }
 `;
 
-// export const Format = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   text-align: center;
-//   /* height: 100vh; */
+export const Board = styled.div`
+  display: flex;
 
-//   padding: 0 28px;
+  flex-direction: column;
+  text-align: center;
 
-//   .title {
-//     font-family: 'Bebas Neue', cursive;
-//     font-size: 3em;
-//   }
+  margin: 64px 0;
+  padding: 0 28px;
 
-//   .description {
-//     p {
-//       margin-top: 8px;
-//       letter-spacing: 0.05em;
-//       line-height: 1.5em;
-//     }
-//   }
-// `;
+  .title {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3em;
+    margin-bottom: 24px;
+  }
 
-// export const CardContainer = styled.div`
-//   display: flex;
-//   margin-top: 24px;
-// `;
+  .description {
+    p {
+      margin-top: 8px;
+      letter-spacing: 0.05em;
+      line-height: 1.5em;
+    }
+  }
 
-// export const Card = styled.div`
-//   display: flex;
-//   flex-direction: column;
+  .react-multi-carousel-list {
+    height: 100%;
 
-//   /* justify-content: space-between; */
-//   width: 100%;
-//   height: 100%;
-//   overflow: hidden;
+    @media (max-width: 900px) {
+      height: 256px;
+    }
+  }
 
-//   background: #fff;
+  .react-multiple-carousel__arrow {
+    position: absolute;
+    outline: 0;
+    transition: all 0.5s;
+    border-radius: 0;
+    z-index: 1000;
+    border: 0;
+    background: rgba(0, 0, 0, 0.5);
+    min-width: 64px;
+    min-height: 72px;
+    opacity: 1;
+    cursor: pointer;
 
-//   & + div {
-//     margin-left: 24px;
-//     overflow: hidden;
-//   }
+    @media (max-width: 900px) {
+      min-width: 32px;
+      min-height: 36px;
+    }
+  }
 
-//   img {
-//     width: 100%;
-//     height: 200px;
-//     object-fit: cover;
-//   }
+  .react-multiple-carousel__arrow--right {
+    bottom: 0;
+    right: 0;
+    background: #c44428;
+    opacity: 0.8;
+  }
 
-//   color: #000;
+  .react-multiple-carousel__arrow--right:hover {
+    opacity: 1;
+  }
 
-//   section {
-//     overflow: hidden;
+  .react-multiple-carousel__arrow--left {
+    bottom: 0;
+    left: auto;
+    right: 64px;
+    background: #e37250;
+    opacity: 0.8;
 
-//     padding: 24px;
+    @media (max-width: 900px) {
+      right: 32px;
+    }
+  }
 
-//     text-align: left;
+  .react-multiple-carousel__arrow--left:hover {
+    opacity: 1;
+  }
 
-//     h1 {
-//       color: #ff7350;
-//       margin-bottom: 24px;
-//     }
+  .react-multi-carousel-dot button {
+    border-width: 3px;
+    border-color: #e37250;
+    background: #e37250;
+  }
 
-//     .area {
-//       font-weight: 500;
-//     }
+  .react-multi-carousel-dot--active button {
+    background: #ffffff;
+  }
 
-//     .details {
-//       margin: 24px 0;
+  .title {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3em;
+  }
 
-//       P {
-//         color: #9a9da0;
+  .description {
+    p {
+      margin-top: 8px;
+      letter-spacing: 0.05em;
+      line-height: 1.5em;
+    }
+  }
+`;
 
-//         & + p {
-//           margin-top: 8px;
-//         }
-//       }
-//     }
+export const CardContainer = styled.ul`
+  display: flex;
+  margin-top: 24px;
+  overflow-x: auto;
+`;
 
-//     .price {
-//       display: flex;
-//       justify-content: space-between;
-//       align-items: center;
+export const Card = styled.li`
+  display: flex;
+  flex-direction: column;
 
-//       span {
-//         font-weight: bold;
-//         font-size: 1.6em;
-//         color: #474747;
-//       }
+  background: #fff;
+  min-width: 256px;
 
-//       button {
-//         display: flex;
-//         align-items: center;
-//         border-radius: 8px;
-//         background: #ff7350;
+  & + li {
+    margin-left: 24px;
+  }
 
-//         svg {
-//           color: #ffffff;
-//           width: 30px;
-//           height: 30px;
-//         }
-//       }
-//     }
-//   }
-// `;
+  img {
+    width: 100%;
+    /* min-height: 300px; */
+    object-fit: cover;
+  }
 
-// export const OurClubs = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   text-align: center;
+  color: #000;
 
-//   /* height: 100vh; */
+  section {
+    display: flex;
+    justify-content: space-between;
 
-//   padding: 0 28px;
+    flex-direction: column;
+    height: 100%;
 
-//   /* margin: 128px 0; */
+    padding: 24px;
 
-//   .react-multiple-carousel__arrow {
-//     position: absolute;
-//     outline: 0;
-//     transition: all 0.5s;
-//     border-radius: 0;
-//     z-index: 1000;
-//     border: 0;
-//     background: rgba(0, 0, 0, 0.5);
-//     min-width: 64px;
-//     min-height: 72px;
-//     opacity: 1;
-//     cursor: pointer;
-//   }
+    text-align: left;
 
-//   .react-multiple-carousel__arrow--right {
-//     bottom: 0;
-//     right: 0;
-//     background: #c44428;
-//     opacity: 0.8;
-//   }
+    h1 {
+      color: #ff7350;
+      margin-bottom: 24px;
+    }
 
-//   .react-multiple-carousel__arrow--right:hover {
-//     opacity: 1;
-//   }
+    .area {
+      font-weight: 500;
+    }
 
-//   .react-multiple-carousel__arrow--left {
-//     bottom: 0;
-//     left: auto;
-//     right: 64px;
-//     background: #e37250;
-//     opacity: 0.8;
-//   }
+    .details {
+      margin: 24px 0;
 
-//   .react-multiple-carousel__arrow--left:hover {
-//     opacity: 1;
-//   }
+      P {
+        color: #9a9da0;
 
-//   .react-multi-carousel-dot button {
-//     border-width: 3px;
-//     border-color: #e37250;
-//     background: #e37250;
-//   }
+        & + p {
+          margin-top: 8px;
+        }
+      }
+    }
 
-//   .react-multi-carousel-dot--active button {
-//     background: #ffffff;
-//   }
+    .price {
+      display: flex;
+      align-items: center;
 
-//   .title {
-//     font-family: 'Bebas Neue', cursive;
-//     font-size: 3em;
-//   }
+      span {
+        font-weight: bold;
+        font-size: 1.6em;
+        color: #474747;
+      }
 
-//   .description {
-//     p {
-//       margin-top: 8px;
-//       letter-spacing: 0.05em;
-//       line-height: 1.5em;
-//     }
-//   }
-// `;
+      button {
+        display: flex;
+        align-items: center;
+        border-radius: 8px;
+        background: #ff7350;
+
+        margin-left: auto;
+
+        svg {
+          color: #ffffff;
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+`;
 
 // export const Clients = styled.div`
 //   display: flex;
