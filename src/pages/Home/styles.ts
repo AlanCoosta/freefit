@@ -314,14 +314,8 @@ export const AboutList = styled.div`
     text-align: center;
 
     background: #9a9da0;
-    padding: 64px;
-
+    padding: 16px 64px;
     width: 25%;
-
-    svg {
-      width: 30px;
-      height: 30px;
-    }
 
     @media (max-width: 900px) {
       width: 100%;
@@ -334,6 +328,11 @@ export const AboutList = styled.div`
 
     &:nth-child(3) {
       background: #ff7350;
+    }
+
+    svg {
+      width: 30px;
+      height: 30px;
     }
 
     h3 {
