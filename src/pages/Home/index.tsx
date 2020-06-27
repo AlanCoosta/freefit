@@ -1,16 +1,16 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
-import { FiMenu, FiX } from 'react-icons/fi';
-// import { FiMapPin, FiChevronRight, FiMenu, FiX } from 'react-icons/fi';
-// import { MdDirectionsRun } from 'react-icons/md';
-// import { GiTakeMyMoney, GiWeightLiftingUp } from 'react-icons/gi';
+
+import { FiMapPin, FiMenu, FiX } from 'react-icons/fi';
+import { MdDirectionsRun } from 'react-icons/md';
+import { GiTakeMyMoney, GiWeightLiftingUp } from 'react-icons/gi';
 
 // import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
 import Logo from '../../assets/logo.svg';
 import WomanFitness from '../../assets/fitness.png';
-// import AboutImage from '../../assets/about.jpeg';
+import AboutImage from '../../assets/about.jpeg';
 // import Mini from '../../assets/mini.jpeg';
 // import Midi from '../../assets/midi.jpeg';
 // import Maxi from '../../assets/maxi.jpeg';
@@ -56,12 +56,13 @@ const Home: React.FC = () => {
       <S.Container>
         <S.Header>
           <S.HeaderLeft>
-            <div>
+            <a href="#">
               <img src={Logo} alt="Logo" />
-              <h1>FREE FIT</h1>
-            </div>
 
-            <div className="menu">
+              <h1>FREE FIT</h1>
+            </a>
+
+            <div>
               <a href="#about">About</a>
               <a href="#format">Format</a>
               <a href="#gallery">Gallery</a>
@@ -81,7 +82,7 @@ const Home: React.FC = () => {
         </S.Header>
 
         <S.Box>
-          <S.Franchise id="about">
+          <S.Franchise>
             <S.FranchiseText>
               <h1>FRANCHISE FITNESS CLUB</h1>
 
@@ -113,58 +114,61 @@ const Home: React.FC = () => {
             </S.FranchiseConfortable>
           </S.Franchise>
         </S.Box>
-        {/*
-      <S.About>
-        <S.AboutContent>
-          <S.AboutText>
+
+        <S.About id="about">
+          <S.AboutContent>
+            <S.AboutText>
+              <div>
+                <h1>ABOUT</h1>
+
+                <p>
+                  Free Fit is a chain of fitness clubs in a comfortable format,
+                  combining tha leading fitness clubs of the country under its
+                  brand.
+                </p>
+
+                <p>
+                  The Free Fit team inspires people to do fitness. Win the main
+                  victory - create the body and spirit of your dreams.
+                </p>
+
+                <button type="button">BUY A FRANCHISE</button>
+              </div>
+            </S.AboutText>
+
             <div>
-              <h1>ABOUT</h1>
-
-              <p>
-                Free Fit is a chain of fitness clubs in a comfortable format,
-                combining tha leading fitness clubs of the country under its
-                brand.
-              </p>
-
-              <p>
-                The Free Fit team inspires people to do fitness. Win the main
-                victory - create the body and spirit of your dreams.
-              </p>
-
-              <button type="button">BUY A FRANCHISE</button>
+              <img src={AboutImage} alt="" />
             </div>
-          </S.AboutText>
+          </S.AboutContent>
 
-          <img src={AboutImage} alt="" />
-        </S.AboutContent>
+          <S.AboutList>
+            <div>
+              <FiMapPin />
+              <h3>Convenient location</h3>
+              <p>Our clubs are located in easily accessible places</p>
+            </div>
 
-        <S.AboutList>
-          <div>
-            <FiMapPin />
-            <h3>Convenient location</h3>
-            <p>Our clubs are located in easily accessible places</p>
-          </div>
+            <div>
+              <GiWeightLiftingUp />
+              <h3>Effective Workouts</h3>
+              <p>Activities with the best trainers of your city</p>
+            </div>
 
-          <div>
-            <GiWeightLiftingUp />
-            <h3>Effective Workouts</h3>
-            <p>Activities with the best trainers of your city</p>
-          </div>
+            <div>
+              <MdDirectionsRun />
+              <h3>Modern facilities</h3>
+              <p>The gyms are equipped with the latest sporting requirements</p>
+            </div>
 
-          <div>
-            <MdDirectionsRun />
-            <h3>Modern facilities</h3>
-            <p>The gyms are equipped with the latest sporting requirements</p>
-          </div>
+            <div>
+              <GiTakeMyMoney />
+              <h3>Low price</h3>
+              <p>Excellent athletic performance fot little money</p>
+            </div>
+          </S.AboutList>
+        </S.About>
 
-          <div>
-            <GiTakeMyMoney />
-            <h3>Low price</h3>
-            <p>Excellent athletic performance fot little money</p>
-          </div>
-        </S.AboutList>
-      </S.About>
-
+        {/*
       <S.Box>
         <S.Format id="format">
           <h1 className="title">Format</h1>
