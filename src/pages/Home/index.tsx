@@ -122,7 +122,9 @@ const Home: React.FC = () => {
                 largest chain fitness clubs in Russia
               </p>
 
-              <button type="button">LEARN MORE</button>
+              <button type="button">
+                <a href="#about">LEARN MORE</a>
+              </button>
 
               <div>
                 <a href="#">Instagram</a>
@@ -163,7 +165,9 @@ const Home: React.FC = () => {
                   victory - create the body and spirit of your dreams.
                 </p>
 
-                <button type="button">BUY A FRANCHISE</button>
+                <button type="button">
+                  <a href="#format">BUY A FRANCHISE</a>
+                </button>
               </div>
             </S.AboutText>
 

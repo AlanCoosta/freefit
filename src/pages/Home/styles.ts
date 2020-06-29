@@ -186,9 +186,13 @@ export const FranchiseText = styled.div`
     background: #ff7350;
     padding: 16px 32px;
     border-radius: 26px;
-    color: #ffffff;
+
     font-weight: 500;
     max-width: 264px;
+
+    a {
+      color: #ffffff;
+    }
   }
 
   div {
@@ -290,10 +294,13 @@ export const AboutText = styled.div`
     background: #ff7350;
     padding: 16px 32px;
     border-radius: 26px;
-    color: #ffffff;
     font-weight: 500;
     margin-top: 24px;
     max-width: 200px;
+
+    a {
+      color: #ffffff;
+    }
   }
 `;
 
