@@ -43,10 +43,10 @@ const Home: React.FC = () => {
     {
       id: 2,
       image_url: client2,
-      name: 'Jason Statham',
+      name: 'Aline Riscado',
       description:
         'Answer to questions are not consultative in nature, but really applied and helping in work',
-      video_url: 'https://www.youtube.com/embed/g-Sbnw5mn2w',
+      video_url: 'https://www.youtube.com/embed/a7sV13ruZWA',
     },
     {
       id: 3,
