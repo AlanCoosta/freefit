@@ -18,15 +18,45 @@ import Gym1 from '../../assets/gym1.jpeg';
 import Gym2 from '../../assets/gym2.jpeg';
 import Gym3 from '../../assets/gym3.jpeg';
 import Gym4 from '../../assets/gym4.jpeg';
-// import client1 from '../../assets/client1.jpg';
-// import client2 from '../../assets/client2.jpg';
-// import client3 from '../../assets/client3.jpg';
+import client1 from '../../assets/client1.jpg';
+import client2 from '../../assets/client2.jpg';
+import client3 from '../../assets/client3.jpg';
+
+import CardVideo from '../../components/CardVideo';
 
 import * as S from './styles';
 
 const Home: React.FC = () => {
   const [modal, setModal] = useState(false);
+
   const imagesGym = [Gym1, Gym2, Gym3, Gym4];
+
+  const clients = [
+    {
+      id: 1,
+      image_url: client1,
+      name: 'Dwayne Johnson',
+      description:
+        'The "FreeFit" approach to the product is different from other frnachises with its thoughtfulness and focus on honest cooperation',
+      video_url: 'https://www.youtube.com/embed/24fdcMw0Bj0',
+    },
+    {
+      id: 2,
+      image_url: client2,
+      name: 'Jason Statham',
+      description:
+        'Answer to questions are not consultative in nature, but really applied and helping in work',
+      video_url: 'https://www.youtube.com/embed/g-Sbnw5mn2w',
+    },
+    {
+      id: 3,
+      image_url: client3,
+      name: 'Chris Hemsworth',
+      description:
+        'In the learning process, gaps are revealed, which you need to work on. I liked speaker presentation, everything was interesting, in detail, examples from practice were given.',
+      video_url: 'https://www.youtube.com/embed/xKFSmazLN4w',
+    },
+  ];
 
   return (
     <>
@@ -317,6 +347,7 @@ const Home: React.FC = () => {
               >
                 {imagesGym.map((image) => (
                   <img
+                    key={image}
                     src={image}
                     alt="Gym"
                     style={{
@@ -333,61 +364,23 @@ const Home: React.FC = () => {
           </S.Board>
         </S.Box>
 
+        <S.Box>
+          <S.Board id="reviews">
+            <h1 className="title">What Our Clients Say</h1>
+
+            <div className="description">
+              <p>We offer to listen to what our franchises say</p>
+            </div>
+
+            <S.CardVideoContainer>
+              {clients.map((item) => (
+                <CardVideo key={item.id} clients={item} />
+              ))}
+            </S.CardVideoContainer>
+          </S.Board>
+        </S.Box>
+
         {/*
-
-      <S.Box>
-        <S.Clients id="reviews">
-          <h1 className="title">What Our Clients Say</h1>
-
-          <div className="description">
-            <p>We offer to listen to what our franchisees say</p>
-          </div>
-
-          <S.CardVideoContainer>
-            <S.CardVideo>
-              <img src={client1} alt="" />
-
-              <section>
-                <h3>Dwayne Johnson</h3>
-
-                <p>
-                  The "FreeFit" approach to the product is different from other
-                  frnachises with its thoughtfulness and focus on honest
-                  cooperation
-                </p>
-              </section>
-            </S.CardVideo>
-
-            <S.CardVideo>
-              <img src={client2} alt="" />
-
-              <section>
-                <h3>Jason Statham</h3>
-
-                <p>
-                  Answer to questions are not consultative in nature, but really
-                  applied and helping in work
-                </p>
-              </section>
-            </S.CardVideo>
-
-            <S.CardVideo>
-              <img src={client3} alt="" />
-
-              <section>
-                <h3>Jason Momoa</h3>
-
-                <p>
-                  In the learning process, gaps are revealed, which you need to
-                  work on. I liked speaker presentation, everything was
-                  interesting, in detail, examples from practice were given.
-                </p>
-              </section>
-            </S.CardVideo>
-          </S.CardVideoContainer>
-        </S.Clients>
-      </S.Box>
-
       <S.Maps>
         <div>Mapa</div>
         <div>Formulario</div>

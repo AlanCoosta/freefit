@@ -385,7 +385,6 @@ export const Board = styled.div`
     outline: 0;
     transition: all 0.5s;
     border-radius: 0;
-    z-index: 1000;
     border: 0;
     background: rgba(0, 0, 0, 0.5);
     min-width: 64px;
@@ -535,66 +534,78 @@ export const Card = styled.li`
   }
 `;
 
-// export const Clients = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   text-align: center;
+// CLIENTS
 
-//   /* height: 100vh; */
+export const CardVideoContainer = styled.div`
+  display: flex;
+  margin-top: 24px;
+  overflow-x: auto;
 
-//   padding: 0 28px;
+  @media (max-width: 900px) {
+    display: block;
+  }
+`;
 
-//   /* margin: 128px 0; */
+export const CardVideo = styled.div`
+  display: flex;
+  flex-direction: column;
 
-//   .title {
-//     font-family: 'Bebas Neue', cursive;
-//     font-size: 3em;
-//   }
+  width: 100%;
+  height: 100%;
 
-//   .description {
-//     p {
-//       margin-top: 8px;
-//       letter-spacing: 0.05em;
-//       line-height: 1.5em;
-//     }
-//   }
-// `;
+  figure {
+    position: relative;
+    border: 0;
 
-// export const CardVideoContainer = styled.div`
-//   display: flex;
-//   margin-top: 24px;
-// `;
+    button {
+      display: flex;
+      align-items: center;
 
-// export const CardVideo = styled.div`
-//   display: flex;
-//   flex-direction: column;
+      position: absolute;
+      bottom: 24px;
+      right: 16px;
 
-//   width: 100%;
-//   height: 100%;
-//   overflow: hidden;
+      background: #ff7350;
+      padding: 12px;
+      border-radius: 8px;
+      color: #ffffff;
+      font-weight: 500;
 
-//   & + div {
-//     margin-left: 24px;
-//     overflow: hidden;
-//   }
+      svg {
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
 
-//   img {
-//     width: 100%;
-//     height: 200px;
-//     object-fit: cover;
-//   }
+  & + div {
+    margin-left: 24px;
 
-//   section {
-//     margin-top: 8px;
+    @media (max-width: 900px) {
+      margin-left: 0px;
+      margin-top: 32px;
+    }
+  }
 
-//     text-align: left;
+  img {
+    width: 100%;
+    height: 256px;
+    object-fit: cover;
+  }
 
-//     h3 {
-//       margin: 16px 0;
-//     }
-//   }
-// `;
+  section {
+    margin-top: 8px;
+    text-align: left;
+
+    @media (max-width: 900px) {
+      text-align: center;
+    }
+
+    h3 {
+      margin: 16px 0;
+    }
+  }
+`;
 
 // export const Maps = styled.div``;
 
