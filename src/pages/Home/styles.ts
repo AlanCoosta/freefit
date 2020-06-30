@@ -830,6 +830,10 @@ export const Footer = styled.div`
       color: #9a9da0;
     }
 
+    span {
+      text-align: right;
+    }
+
     .privacy {
       margin-left: 80px;
     }
