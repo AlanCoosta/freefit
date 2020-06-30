@@ -19,7 +19,6 @@ export const Container = styled.div`
       position: absolute;
       bottom: 24px;
       right: 16px;
-      /* z-index: 99; */
 
       background: #ff7350;
       padding: 12px;

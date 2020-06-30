@@ -57,6 +57,7 @@ const CardVideo: React.FC<ModalProps> = ({ clients }) => {
             },
             overlay: {
               backgroundColor: '#121214e6',
+              zIndex: 9999,
             },
           }}
         >

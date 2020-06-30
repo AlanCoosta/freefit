@@ -1,9 +1,20 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
 
-import { FiMapPin, FiMenu, FiX, FiChevronRight } from 'react-icons/fi';
+import {
+  FiMapPin,
+  FiMenu,
+  FiX,
+  FiChevronRight,
+  FiFacebook,
+  FiGithub,
+  FiLinkedin,
+  FiTwitter,
+} from 'react-icons/fi';
 import { MdDirectionsRun } from 'react-icons/md';
 import { GiTakeMyMoney, GiWeightLiftingUp } from 'react-icons/gi';
+
+import { Map, Marker, TileLayer } from 'react-leaflet';
 
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
@@ -28,6 +39,11 @@ import * as S from './styles';
 
 const Home: React.FC = () => {
   const [modal, setModal] = useState(false);
+
+  const [initialPosition] = useState<[number, number]>([
+    37.4212089,
+    -122.0846363,
+  ]);
 
   const imagesGym = [Gym1, Gym2, Gym3, Gym4];
 
@@ -81,7 +97,9 @@ const Home: React.FC = () => {
           Reviews
         </a>
 
-        <a>Contact</a>
+        <a href="#contact" onClick={() => setModal(false)}>
+          Contact
+        </a>
       </S.Modal>
 
       <S.Container>
@@ -93,17 +111,17 @@ const Home: React.FC = () => {
               <h1>FREE FIT</h1>
             </a>
 
-            <div>
+            <nav>
               <a href="#about">About</a>
               <a href="#format">Format</a>
               <a href="#gallery">Gallery</a>
               <a href="#reviews">Reviews</a>
-              <a>Contact</a>
-            </div>
+              <a href="#contact">Contact</a>
+            </nav>
           </S.HeaderLeft>
 
           <S.Contacts>
-            <span>(23)99563-0799</span>
+            <span>+55 21 99563-0799</span>
             <a href="#">Order call</a>
           </S.Contacts>
 
@@ -204,7 +222,7 @@ const Home: React.FC = () => {
         </S.About>
 
         <S.Box>
-          <S.Board id="format">
+          <S.Board id="format" className="format">
             <h1 className="title">Format</h1>
 
             <div className="description">
@@ -384,38 +402,89 @@ const Home: React.FC = () => {
           </S.Board>
         </S.Box>
 
-        {/*
-      <S.Maps>
-        <div>Mapa</div>
-        <div>Formulario</div>
-      </S.Maps>
+        <S.Maps>
+          <Map center={initialPosition} zoom={18}>
+            <TileLayer
+              attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            <Marker position={initialPosition} />
+          </Map>
 
-      <S.SocialMedia>
-        <div>21 995630799</div>
-        <div>
-          <p>alan@rocketseat.com.br</p>
-          <span>github</span>
-          <span>twitter</span>
-          <span>google</span>
-          <span>facebook</span>
-        </div>
-      </S.SocialMedia>
+          <form>
+            <div>
+              <p>
+                <b>Have questions?</b> Leave a request and we will call within
+                10 minutes
+              </p>
 
-      <S.Footer>
-        <div>
-          <span>About</span>
-          <span>Format</span>
-          <span>Gallery</span>
-          <span>Reviews</span>
-          <span>Contatcs</span>
-        </div>
+              <input type="text" placeholder="Name" />
+              <input type="text" placeholder="Phone Number" />
 
-        <div>
-          <span>2020</span>
-          <span>Privacy Policy</span>
-          <span>Design: GABI ABKAROV</span>
-        </div>
-      </S.Footer> */}
+              <button type="submit">SEND</button>
+            </div>
+          </form>
+        </S.Maps>
+
+        <S.SocialMedia id="contact">
+          <div className="container">
+            <div>
+              <h1>+55 21 99563-0799</h1>
+            </div>
+
+            <div className="socialMedias">
+              <p>alancoosta2323@gmail.com.br</p>
+
+              <div className="icons">
+                <a
+                  href="https://github.com/AlanCoosta"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FiGithub />
+                </a>
+
+                <a href="#">
+                  <FiTwitter />
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/alancoosta/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FiLinkedin />
+                </a>
+
+                <a href="#">
+                  <FiFacebook />
+                </a>
+              </div>
+            </div>
+          </div>
+        </S.SocialMedia>
+
+        <S.MapSite>
+          <div className="container">
+            <a href="#about">About</a>
+            <a href="#format">Format</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </S.MapSite>
+
+        <S.Footer>
+          <div className="container">
+            <span>©‎2020</span>
+            <span className="privacy">Privacy Policy</span>
+            <span>
+              <a href="https://www.behance.net/gallery/94841485/Landing-page-for-Fitness-Club-Franchise">
+                Design: GABI ABKAROV
+              </a>
+            </span>
+          </div>
+        </S.Footer>
       </S.Container>
     </>
   );

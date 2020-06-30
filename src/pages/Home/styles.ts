@@ -16,6 +16,7 @@ export const Header = styled.div`
 export const HeaderLeft = styled.div`
   display: flex;
   align-items: center;
+  height: 32px;
 
   a {
     display: flex;
@@ -23,7 +24,7 @@ export const HeaderLeft = styled.div`
     color: #ffffff;
 
     img {
-      width: 32px;
+      height: 32px;
     }
 
     h1 {
@@ -31,7 +32,7 @@ export const HeaderLeft = styled.div`
     }
   }
 
-  div {
+  nav {
     display: flex;
 
     @media (max-width: 900px) {
@@ -363,7 +364,17 @@ export const Board = styled.div`
   text-align: center;
 
   margin: 64px 0;
-  padding: 0 28px;
+  padding: 0 24px;
+
+  @media (max-width: 900px) {
+    &.format {
+      padding: 0;
+
+      .description {
+        padding: 0 24px;
+      }
+    }
+  }
 
   .title {
     font-family: 'Bebas Neue', cursive;
@@ -473,9 +484,14 @@ export const Card = styled.li`
     margin-left: 24px;
   }
 
+  @media (max-width: 900px) {
+    &:first-child {
+      margin-left: 24px;
+    }
+  }
+
   img {
     width: 100%;
-    /* min-height: 300px; */
     object-fit: cover;
   }
 
@@ -614,8 +630,208 @@ export const CardVideo = styled.div`
   }
 `;
 
-// export const Maps = styled.div``;
+export const Maps = styled.div`
+  display: flex;
+  background: #ffffff;
+  color: #000000;
 
-// export const SocialMedia = styled.div``;
+  @media (max-width: 900px) {
+    display: block;
+  }
 
-// export const Footer = styled.div``;
+  .leaflet-container {
+    width: 50%;
+
+    @media (max-width: 900px) {
+      width: 100%;
+      height: 256px;
+    }
+  }
+
+  .leaflet-pane {
+    z-index: 1;
+  }
+
+  form {
+    width: 50%;
+    padding: 64px;
+
+    @media (max-width: 900px) {
+      padding: 24px;
+    }
+
+    div {
+      width: 350px;
+
+      p {
+        font-size: 1.4em;
+        margin-bottom: 24px;
+        color: #9a9da0;
+      }
+
+      b {
+        color: #000000;
+      }
+
+      input {
+        width: 100%;
+        padding: 16px;
+
+        margin-bottom: 16px;
+      }
+
+      button {
+        background: #ff7350;
+        color: #ffffff;
+        padding: 16px 32px;
+        border-radius: 26px;
+
+        margin-top: 16px;
+
+        font-weight: 500;
+        width: 50%;
+      }
+    }
+  }
+`;
+
+export const SocialMedia = styled.div`
+  display: flex;
+
+  background: #ffffff;
+  color: #000000;
+  min-height: 128px;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    padding: 0 24px;
+
+    @media (max-width: 900px) {
+      display: block;
+    }
+
+    div {
+      width: 50%;
+
+      h1 {
+        font-size: 3em;
+
+        @media (max-width: 900px) {
+          font-size: 1.6em;
+        }
+      }
+
+      @media (max-width: 900px) {
+        width: 100%;
+      }
+    }
+
+    .socialMedias {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #9a9da0;
+
+      @media (max-width: 900px) {
+        display: block;
+
+        p {
+          padding: 32px 0;
+        }
+      }
+
+      p {
+        position: relative;
+        left: -8px;
+        text-decoration: underline;
+
+        @media (max-width: 900px) {
+          left: 0;
+        }
+      }
+
+      .icons {
+        display: flex;
+        justify-content: space-between;
+
+        a {
+          display: flex;
+          align-items: center;
+          padding: 8px;
+          border: 2px solid #9a9da0;
+          border-radius: 50%;
+          transition: all 0.2s;
+
+          &:hover {
+            border-color: #ff7350;
+
+            svg {
+              color: #ff7350;
+            }
+          }
+
+          svg {
+            color: #9a9da0;
+          }
+        }
+      }
+    }
+  }
+`;
+
+export const MapSite = styled.div`
+  background: #fff;
+  color: #000;
+  padding: 48px 0;
+  border-bottom: 1px solid #9a9da0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    padding: 0 24px;
+
+    a {
+      font-weight: 500;
+      color: #9a9da0;
+    }
+  }
+`;
+
+export const Footer = styled.div`
+  background: #fff;
+  color: #000;
+  padding: 48px 0;
+  border-bottom: 1px solid #31353d;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    padding: 0 24px;
+
+    span,
+    a {
+      color: #9a9da0;
+    }
+
+    .privacy {
+      margin-left: 80px;
+    }
+  }
+`;
