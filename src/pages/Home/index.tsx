@@ -480,7 +480,7 @@ const Home: React.FC = () => {
             <span className="privacy">Privacy Policy</span>
             <span>
               <a href="https://www.behance.net/gallery/94841485/Landing-page-for-Fitness-Club-Franchise">
-                Design: GABI ABKAROV
+                Design: GABI ASKAROV
               </a>
             </span>
           </div>

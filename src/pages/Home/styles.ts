@@ -828,9 +828,6 @@ export const Footer = styled.div`
     span,
     a {
       color: #9a9da0;
-    }
-
-    span {
       text-align: right;
     }
 
