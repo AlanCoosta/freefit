@@ -20,6 +20,8 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
 import Logo from '../../assets/logo.svg';
+import phone from '../../assets/phone.svg';
+
 import WomanFitness from '../../assets/fitness.png';
 import AboutImage from '../../assets/about.jpeg';
 import Mini from '../../assets/mini.jpeg';
@@ -104,30 +106,31 @@ const Home: React.FC = () => {
 
       <S.Container>
         <S.Header>
-          <S.HeaderLeft>
+          <S.Logo>
             <a href="#">
               <img src={Logo} alt="Logo" />
 
               <h1>FREE FIT</h1>
             </a>
+          </S.Logo>
 
-            <nav>
-              <a href="#about">About</a>
-              <a href="#format">Format</a>
-              <a href="#gallery">Gallery</a>
-              <a href="#reviews">Reviews</a>
-              <a href="#contact">Contact</a>
-            </nav>
-          </S.HeaderLeft>
+          <S.Menu>
+            <a href="#about">About</a>
+            <a href="#format">Format</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+          </S.Menu>
 
-          <S.Contacts>
-            <span>+55 21 99563-0799</span>
+          <S.Phone>
+            <span>8 495 646-46-45</span>
+
             <a href="#">Order call</a>
-          </S.Contacts>
 
-          <S.MenuHamburguer>
-            <FiMenu size={30} onClick={() => setModal(!modal)} />
-          </S.MenuHamburguer>
+            <img src={phone} alt="" />
+
+            <FiMenu onClick={() => setModal(!modal)} />
+          </S.Phone>
         </S.Header>
 
         <S.Box>
@@ -429,7 +432,7 @@ const Home: React.FC = () => {
         <S.SocialMedia id="contact">
           <div className="container">
             <div>
-              <h1>+55 21 99563-0799</h1>
+              <h1>8 495 646-46-45</h1>
             </div>
 
             <div className="socialMedias">

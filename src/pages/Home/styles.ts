@@ -1,22 +1,30 @@
 import styled from 'styled-components';
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+`;
 
 // HEADER
-
 export const Header = styled.div`
-  height: 128px;
-  padding: 0 24px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  max-width: 1800px;
+  height: 35px;
+  margin: 60px 60px 0;
+
+  @media (max-width: 700px) {
+    margin: 29px 15px;
+  }
 `;
 
-export const HeaderLeft = styled.div`
+export const Logo = styled.div`
   display: flex;
   align-items: center;
-  height: 32px;
 
   a {
     display: flex;
@@ -24,60 +32,98 @@ export const HeaderLeft = styled.div`
     color: #ffffff;
 
     img {
+      width: 32px;
       height: 32px;
+      margin-right: 14px;
     }
 
     h1 {
       font-family: 'Bebas Neue', cursive;
+      font-size: 32px;
     }
   }
 
-  nav {
-    display: flex;
-
-    @media (max-width: 900px) {
-      display: none;
+  @media (max-width: 700px) {
+    img {
+      width: 22px;
+      height: 22px;
+      margin-right: 10px;
     }
 
-    a {
-      margin-left: 24px;
-      cursor: pointer;
-      color: #9a9da0;
-      font-weight: 500;
+    h1 {
+      font-size: 22.68px;
     }
   }
 `;
 
-export const Contacts = styled.div`
+export const Menu = styled.nav`
+  display: flex;
+
+  a {
+    cursor: pointer;
+    color: #ffffff;
+    font-weight: 500;
+
+    & + a {
+      margin-left: 40px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    display: none;
+  }
+`;
+
+export const Phone = styled.div`
   display: flex;
   align-items: center;
 
-  @media (max-width: 900px) {
-    display: none;
-  }
-
   span {
-    margin-right: 8px;
-    font-size: 1.4em;
+    margin-right: 83px;
+    font-size: 24px;
     font-weight: bold;
-    margin-right: 48px;
+    color: #ffffff;
   }
 
   a {
     font-size: 0.8em;
-    color: #9a9da0;
+    color: #ffffff;
+    text-decoration: underline;
   }
-`;
 
-export const MenuHamburguer = styled.div`
-  display: none;
+  img {
+    display: none;
+    width: 35px;
+    height: 35px;
+  }
 
   svg {
-    cursor: pointer;
+    display: none;
+    color: #ffffff;
   }
 
-  @media (max-width: 900px) {
-    display: flex;
+  @media (max-width: 700px) {
+    span {
+      margin-right: 15px;
+      font-size: 14px;
+    }
+
+    a {
+      display: none;
+    }
+
+    img {
+      display: flex;
+      margin-right: 18px;
+    }
+
+    svg {
+      display: flex;
+      width: 18px;
+      height: 16px;
+
+      cursor: pointer;
+    }
   }
 `;
 
@@ -141,20 +187,20 @@ export const Franchise = styled.div`
   padding: 0 24px;
   margin-bottom: 128px;
 
-  @media (max-width: 900px) {
+  @media (max-width: 700px) {
     display: block;
   }
 
   div {
     width: 100%;
 
-    @media (max-width: 900px) {
+    @media (max-width: 700px) {
       margin-bottom: 64px;
     }
 
     img {
       width: 100%;
-      max-height: 900px;
+      max-height: 700px;
       object-fit: contain;
     }
   }
@@ -165,7 +211,7 @@ export const FranchiseText = styled.div`
   justify-content: center;
   flex-direction: column;
 
-  @media (max-width: 900px) {
+  @media (max-width: 700px) {
     align-items: center;
     text-align: center;
   }
@@ -201,7 +247,7 @@ export const FranchiseText = styled.div`
     justify-content: space-between;
     margin-top: 128px;
 
-    @media (max-width: 900px) {
+    @media (max-width: 700px) {
       display: none;
     }
 
@@ -240,7 +286,7 @@ export const About = styled.div``;
 export const AboutContent = styled.div`
   display: flex;
 
-  @media (max-width: 900px) {
+  @media (max-width: 700px) {
     display: block;
   }
 
@@ -248,7 +294,7 @@ export const AboutContent = styled.div`
     width: 50%;
     background: #ffffff;
 
-    @media (max-width: 900px) {
+    @media (max-width: 700px) {
       width: 100%;
     }
 
@@ -271,7 +317,7 @@ export const AboutText = styled.div`
   div {
     padding: 64px 0;
 
-    @media (max-width: 900px) {
+    @media (max-width: 700px) {
       padding: 64px;
     }
   }
@@ -308,7 +354,7 @@ export const AboutText = styled.div`
 export const AboutList = styled.div`
   display: flex;
 
-  @media (max-width: 900px) {
+  @media (max-width: 700px) {
     display: block;
     height: 100vh;
   }
@@ -325,7 +371,7 @@ export const AboutList = styled.div`
     padding: 16px 64px;
     width: 25%;
 
-    @media (max-width: 900px) {
+    @media (max-width: 700px) {
       width: 100%;
       height: 25%;
     }
@@ -366,7 +412,7 @@ export const Board = styled.div`
   margin: 64px 0;
   padding: 0 24px;
 
-  @media (max-width: 900px) {
+  @media (max-width: 700px) {
     &.format {
       padding: 0;
 
@@ -393,7 +439,7 @@ export const Board = styled.div`
   .react-multi-carousel-list {
     height: 100%;
 
-    @media (max-width: 900px) {
+    @media (max-width: 700px) {
       height: 256px;
     }
   }
@@ -410,7 +456,7 @@ export const Board = styled.div`
     opacity: 1;
     cursor: pointer;
 
-    @media (max-width: 900px) {
+    @media (max-width: 700px) {
       min-width: 32px;
       min-height: 36px;
     }
@@ -434,7 +480,7 @@ export const Board = styled.div`
     background: #e37250;
     opacity: 0.8;
 
-    @media (max-width: 900px) {
+    @media (max-width: 700px) {
       right: 32px;
     }
   }
@@ -484,7 +530,7 @@ export const Card = styled.li`
     margin-left: 24px;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 700px) {
     &:first-child {
       margin-left: 24px;
     }
@@ -564,7 +610,7 @@ export const CardVideoContainer = styled.div`
   margin-top: 24px;
   overflow-x: auto;
 
-  @media (max-width: 900px) {
+  @media (max-width: 700px) {
     display: block;
   }
 `;
@@ -604,7 +650,7 @@ export const CardVideo = styled.div`
   & + div {
     margin-left: 24px;
 
-    @media (max-width: 900px) {
+    @media (max-width: 700px) {
       margin-left: 0px;
       margin-top: 32px;
     }
@@ -620,7 +666,7 @@ export const CardVideo = styled.div`
     margin-top: 8px;
     text-align: left;
 
-    @media (max-width: 900px) {
+    @media (max-width: 700px) {
       text-align: center;
     }
 
@@ -635,14 +681,14 @@ export const Maps = styled.div`
   background: #ffffff;
   color: #000000;
 
-  @media (max-width: 900px) {
+  @media (max-width: 700px) {
     display: block;
   }
 
   .leaflet-container {
     width: 50%;
 
-    @media (max-width: 900px) {
+    @media (max-width: 700px) {
       width: 100%;
       height: 256px;
     }
@@ -656,7 +702,7 @@ export const Maps = styled.div`
     width: 50%;
     padding: 64px;
 
-    @media (max-width: 900px) {
+    @media (max-width: 700px) {
       padding: 24px;
     }
 
@@ -713,7 +759,7 @@ export const SocialMedia = styled.div`
 
     padding: 0 24px;
 
-    @media (max-width: 900px) {
+    @media (max-width: 700px) {
       display: block;
     }
 
@@ -723,12 +769,12 @@ export const SocialMedia = styled.div`
       h1 {
         font-size: 3em;
 
-        @media (max-width: 900px) {
+        @media (max-width: 700px) {
           font-size: 1.6em;
         }
       }
 
-      @media (max-width: 900px) {
+      @media (max-width: 700px) {
         width: 100%;
       }
     }
@@ -739,7 +785,7 @@ export const SocialMedia = styled.div`
       justify-content: space-between;
       color: #9a9da0;
 
-      @media (max-width: 900px) {
+      @media (max-width: 700px) {
         display: block;
 
         p {
@@ -752,7 +798,7 @@ export const SocialMedia = styled.div`
         left: -8px;
         text-decoration: underline;
 
-        @media (max-width: 900px) {
+        @media (max-width: 700px) {
           left: 0;
         }
       }
