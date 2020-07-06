@@ -1,5 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import AboutImage from '../../assets/about.jpeg';
+import fundo from '../../assets/fundo.png';
 
 export const Container = styled.div`
   .container {
@@ -881,16 +882,12 @@ export const Maps = styled.div`
   background: #ffffff;
   color: #000000;
 
-  @media (max-width: 900px) {
-    display: block;
-  }
-
   .leaflet-container {
     width: 50%;
 
     @media (max-width: 900px) {
       width: 100%;
-      height: 256px;
+      height: 250px;
     }
   }
 
@@ -900,19 +897,19 @@ export const Maps = styled.div`
 
   form {
     width: 50%;
-    padding: 64px;
-
-    @media (max-width: 900px) {
-      padding: 24px;
-    }
+    background: url(${fundo}) no-repeat right;
 
     div {
-      width: 350px;
+      display: flex;
+      flex-direction: column;
+      margin: 110px auto 80px 138px;
 
       p {
-        font-size: 1.4em;
-        margin-bottom: 24px;
-        color: #9a9da0;
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 40px;
+        color: #333333;
+        max-width: 363px;
       }
 
       b {
@@ -921,21 +918,65 @@ export const Maps = styled.div`
 
       input {
         width: 100%;
-        padding: 16px;
+        max-width: 425px;
 
-        margin-bottom: 16px;
+        height: 60px;
+
+        padding: 15px 0 15px 20px;
+
+        & + input {
+          margin-top: 30px;
+          margin-bottom: 40px;
+        }
       }
 
       button {
         background: #ff7350;
         color: #ffffff;
-        padding: 16px 32px;
-        border-radius: 26px;
+        border-radius: 35px;
 
-        margin-top: 16px;
+        width: 100%;
+        max-width: 263px;
+        height: 70px;
+      }
+    }
+  }
 
-        font-weight: 500;
-        width: 50%;
+  @media (max-width: 900px) {
+    display: block;
+
+    form {
+      width: 100%;
+      background: none;
+
+      div {
+        align-items: center;
+        margin: 40px 14px 0;
+
+        p {
+          max-width: 242px;
+          font-size: 16px;
+          margin-bottom: 30px;
+          text-align: center;
+        }
+
+        input {
+          height: 40px;
+
+          &::placeholder {
+            font-size: 12px;
+          }
+
+          & + input {
+            margin-top: 20px;
+            margin-bottom: 30px;
+          }
+        }
+
+        button {
+          width: 170px;
+          height: 45px;
+        }
       }
     }
   }
@@ -945,37 +986,21 @@ export const SocialMedia = styled.div`
   display: flex;
 
   background: #ffffff;
-  color: #000000;
-  min-height: 128px;
+  color: #333333;
 
-  .container {
+  padding: 130px 0 90px;
+
+  .containerWhite {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
 
     width: 100%;
     max-width: 1440px;
-    margin: 0 auto;
-
-    padding: 0 24px;
-
-    @media (max-width: 900px) {
-      display: block;
-    }
 
     div {
       width: 50%;
 
       h1 {
-        font-size: 3em;
-
-        @media (max-width: 900px) {
-          font-size: 1.6em;
-        }
-      }
-
-      @media (max-width: 900px) {
-        width: 100%;
+        font-size: 72px;
       }
     }
 
@@ -983,24 +1008,12 @@ export const SocialMedia = styled.div`
       display: flex;
       align-items: center;
       justify-content: space-between;
-      color: #9a9da0;
-
-      @media (max-width: 900px) {
-        display: block;
-
-        p {
-          padding: 32px 0;
-        }
-      }
 
       p {
         position: relative;
         left: -8px;
         text-decoration: underline;
-
-        @media (max-width: 900px) {
-          left: 0;
-        }
+        font-size: 28px;
       }
 
       .icons {
@@ -1009,23 +1022,49 @@ export const SocialMedia = styled.div`
 
         a {
           display: flex;
+          justify-content: center;
           align-items: center;
-          padding: 8px;
-          border: 2px solid #9a9da0;
+
+          border: 2px solid #959fb1;
+          width: 45px;
+          height: 45px;
+
           border-radius: 50%;
-          transition: all 0.2s;
-
-          &:hover {
-            border-color: #ff7350;
-
-            svg {
-              color: #ff7350;
-            }
-          }
 
           svg {
-            color: #9a9da0;
+            color: #959fb1;
           }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    padding: 55px 14px 30px;
+    text-align: center;
+    border-bottom: 1px solid #c4c4c4;
+
+    .containerWhite {
+      display: block;
+
+      div {
+        width: 100%;
+
+        h1 {
+          font-size: 30px;
+        }
+      }
+
+      .socialMedias {
+        display: block;
+
+        p {
+          font-size: 18px;
+          margin: 35px 0;
+          left: 0;
+        }
+
+        .icons {
         }
       }
     }
@@ -1035,22 +1074,46 @@ export const SocialMedia = styled.div`
 export const MapSite = styled.div`
   background: #fff;
   color: #000;
-  padding: 48px 0;
-  border-bottom: 1px solid #9a9da0;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #c4c4c4;
 
-  .container {
+  .containerWhite {
     display: flex;
     justify-content: space-between;
 
     width: 100%;
     max-width: 1440px;
-    margin: 0 auto;
-
-    padding: 0 24px;
+    /* margin: 0 auto; */
 
     a {
-      font-weight: 500;
-      color: #9a9da0;
+      font-size: 24px;
+      color: #333333;
+    }
+  }
+
+  @media (max-width: 900px) {
+    padding: 30px 0 50px;
+    border-bottom: 0;
+
+    .containerWhite {
+      display: flex;
+      text-align: center;
+
+      flex-wrap: wrap;
+
+      a {
+        width: 50%;
+        font-size: 16px;
+        color: #333333;
+
+        & + a {
+          margin-bottom: 30px;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
     }
   }
 `;
@@ -1058,27 +1121,59 @@ export const MapSite = styled.div`
 export const Footer = styled.div`
   background: #fff;
   color: #000;
-  padding: 48px 0;
-  border-bottom: 1px solid #31353d;
+  padding: 37px 0 30px;
+  /* padding-bottom: 20px; */
 
-  .container {
+  .containerWhite {
     display: flex;
     justify-content: space-between;
 
     width: 100%;
     max-width: 1440px;
-    margin: 0 auto;
-
-    padding: 0 24px;
 
     span,
     a {
-      color: #9a9da0;
-      text-align: right;
+      font-size: 18px;
+      color: #333333;
+      /* text-align: right; */
+    }
+
+    .reserved {
+      display: none;
     }
 
     .privacy {
-      margin-left: 80px;
+      margin-left: 100px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    padding: 0 0 20px;
+
+    .containerWhite {
+      flex-direction: column;
+      align-items: center;
+
+      span,
+      a {
+        font-size: 12px;
+      }
+
+      .reserved-min,
+      .design {
+        display: none;
+      }
+
+      .reserved {
+        display: flex;
+        margin-bottom: 14px;
+      }
+
+      .privacy {
+        margin-left: 0;
+        text-decoration: underline;
+        white-space: nowrap;
+      }
     }
   }
 `;

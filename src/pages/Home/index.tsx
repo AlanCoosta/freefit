@@ -23,7 +23,7 @@ import Logo from '../../assets/logo.svg';
 import phone from '../../assets/phone.svg';
 
 import WomanFitness from '../../assets/fitness.png';
-import AboutImage from '../../assets/about.jpeg';
+// import AboutImage from '../../assets/about.jpeg';
 import Mini from '../../assets/mini.jpeg';
 import Midi from '../../assets/midi.jpeg';
 import Maxi from '../../assets/maxi.jpeg';
@@ -37,7 +37,7 @@ import client3 from '../../assets/client3.jpg';
 
 import circles from '../../assets/circles.svg';
 
-import ballStripeOrange from '../../assets/ball-stripes-orange.png';
+// import ballStripeOrange from '../../assets/ball-stripes-orange.png';
 
 import CardVideo from '../../components/CardVideo';
 
@@ -436,7 +436,6 @@ const Home: React.FC = () => {
           </S.Board>
         </div>
 
-        {/*
         <S.Maps>
           <Map center={initialPosition} zoom={18}>
             <TileLayer
@@ -453,8 +452,13 @@ const Home: React.FC = () => {
                 10 minutes
               </p>
 
-              <input type="text" placeholder="Name" />
-              <input type="text" placeholder="Phone Number" />
+              <input type="text" placeholder="Name" name="name" id="name" />
+              <input
+                type="text"
+                placeholder="Phone Number"
+                name="phone"
+                id="phone"
+              />
 
               <button type="submit">SEND</button>
             </div>
@@ -462,13 +466,13 @@ const Home: React.FC = () => {
         </S.Maps>
 
         <S.SocialMedia id="contact">
-          <div className="container">
+          <div className="containerWhite">
             <div>
               <h1>8 495 646-46-45</h1>
             </div>
 
             <div className="socialMedias">
-              <p>alancoosta2323@gmail.com.br</p>
+              <p>info@free-fitness.ru</p>
 
               <div className="icons">
                 <a
@@ -500,27 +504,34 @@ const Home: React.FC = () => {
         </S.SocialMedia>
 
         <S.MapSite>
-          <div className="container">
+          <div className="containerWhite">
             <a href="#about">About</a>
+
             <a href="#format">Format</a>
+
             <a href="#gallery">Gallery</a>
+
             <a href="#reviews">Reviews</a>
-            <a href="#contact">Contact</a>
+
+            <a href="#contact">Contacts</a>
           </div>
         </S.MapSite>
 
         <S.Footer>
-          <div className="container">
-            <span>©‎2020</span>
+          <div className="containerWhite">
+            <span className="reserved-min">©‎2020</span>
+
+            <span className="reserved">©‎2020 . All rights reserved</span>
+
             <span className="privacy">Privacy Policy</span>
-            <span>
+
+            <span className="design">
               <a href="https://www.behance.net/gallery/94841485/Landing-page-for-Fitness-Club-Franchise">
-                Design: GABI ASKAROV
+                Design: QABI ASKAROV
               </a>
             </span>
           </div>
         </S.Footer>
-      */}
       </S.Container>
     </>
   );
