@@ -23,7 +23,7 @@ import Logo from '../../assets/logo.svg';
 import phone from '../../assets/phone.svg';
 
 import WomanFitness from '../../assets/fitness.png';
-// import AboutImage from '../../assets/about.jpeg';
+import AboutImage from '../../assets/about.jpeg';
 import Mini from '../../assets/mini.jpeg';
 import Midi from '../../assets/midi.jpeg';
 import Maxi from '../../assets/maxi.jpeg';
@@ -37,7 +37,7 @@ import client3 from '../../assets/client3.jpg';
 
 import circles from '../../assets/circles.svg';
 
-// import ballStripeOrange from '../../assets/ball-stripes-orange.png';
+import ballStripeOrange from '../../assets/ball-stripes-orange.png';
 
 import CardVideo from '../../components/CardVideo';
 
@@ -466,7 +466,7 @@ const Home: React.FC = () => {
         </S.Maps>
 
         <S.SocialMedia id="contact">
-          <div className="containerWhite">
+          <div className="container">
             <div>
               <h1>8 495 646-46-45</h1>
             </div>
@@ -504,7 +504,7 @@ const Home: React.FC = () => {
         </S.SocialMedia>
 
         <S.MapSite>
-          <div className="containerWhite">
+          <div className="container">
             <a href="#about">About</a>
 
             <a href="#format">Format</a>
@@ -518,7 +518,7 @@ const Home: React.FC = () => {
         </S.MapSite>
 
         <S.Footer>
-          <div className="containerWhite">
+          <div className="container">
             <span className="reserved-min">©‎2020</span>
 
             <span className="reserved">©‎2020 . All rights reserved</span>

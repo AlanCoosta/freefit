@@ -990,11 +990,10 @@ export const SocialMedia = styled.div`
 
   padding: 130px 0 90px;
 
-  .containerWhite {
+  .container {
     display: flex;
 
     width: 100%;
-    max-width: 1440px;
 
     div {
       width: 50%;
@@ -1044,7 +1043,7 @@ export const SocialMedia = styled.div`
     text-align: center;
     border-bottom: 1px solid #c4c4c4;
 
-    .containerWhite {
+    .container {
       display: block;
 
       div {
@@ -1077,7 +1076,7 @@ export const MapSite = styled.div`
   padding-bottom: 40px;
   border-bottom: 1px solid #c4c4c4;
 
-  .containerWhite {
+  .container {
     display: flex;
     justify-content: space-between;
 
@@ -1095,7 +1094,7 @@ export const MapSite = styled.div`
     padding: 30px 0 50px;
     border-bottom: 0;
 
-    .containerWhite {
+    .container {
       display: flex;
       text-align: center;
 
@@ -1124,7 +1123,7 @@ export const Footer = styled.div`
   padding: 37px 0 30px;
   /* padding-bottom: 20px; */
 
-  .containerWhite {
+  .container {
     display: flex;
     justify-content: space-between;
 
@@ -1150,7 +1149,7 @@ export const Footer = styled.div`
   @media (max-width: 900px) {
     padding: 0 0 20px;
 
-    .containerWhite {
+    .container {
       flex-direction: column;
       align-items: center;
 
