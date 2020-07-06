@@ -4,10 +4,10 @@
 
 <img src="src/assets/image1.png">
 
-<div style="display:flex; justify-content:space-between">
-  <img style="width: 370px" src="src/assets/image2.png">
-  <img style="width: 370px" src="src/assets/image3.png">
-  <img style="width: 370px" src="src/assets/image4.png">
+<div align="center">
+  <img width="280" height="auto"src="src/assets/image2.png">
+  <img width="280" height="auto"src="src/assets/image3.png">
+  <img width="280" height="auto"src="src/assets/image4.png">
 </div>
 
 <h3 align="center">
