@@ -27,11 +27,9 @@ const CardVideo: React.FC<ModalProps> = ({ clients }) => {
         </button>
       </figure>
 
-      <section>
-        <h3>{clients.name}</h3>
+      <h3>{clients.name}</h3>
 
-        <p>{clients.description}</p>
-      </section>
+      <p>{clients.description}</p>
 
       {modalVideo && (
         <ReactModal

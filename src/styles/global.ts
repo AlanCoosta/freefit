@@ -19,7 +19,7 @@ export default createGlobalStyle`
   }
 
   body, input, button {
-    font-family: 'Roboto', serif;
+    font-family: 'Avenir Next LT Pro', 'Roboto', serif;
     /* font-family: 'Bebas Neue', cursive; */
     font-size: 1em;
   }

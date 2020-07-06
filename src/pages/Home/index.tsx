@@ -35,6 +35,10 @@ import client1 from '../../assets/client1.jpg';
 import client2 from '../../assets/client2.jpg';
 import client3 from '../../assets/client3.jpg';
 
+import circles from '../../assets/circles.svg';
+
+import ballStripeOrange from '../../assets/ball-stripes-orange.png';
+
 import CardVideo from '../../components/CardVideo';
 
 import * as S from './styles';
@@ -53,25 +57,25 @@ const Home: React.FC = () => {
     {
       id: 1,
       image_url: client1,
-      name: 'Dwayne Johnson',
+      name: 'Alex Felton',
       description:
-        'The "FreeFit" approach to the product is different from other frnachises with its thoughtfulness and focus on honest cooperation',
+        'The "Free Fit" approach to the product is different from other franchises with its thoughtfulness and focus on honest cooperation',
       video_url: 'https://www.youtube.com/embed/24fdcMw0Bj0',
     },
     {
       id: 2,
       image_url: client2,
-      name: 'Aline Riscado',
+      name: 'Vasiliy Reznik',
       description:
-        'Answer to questions are not consultative in nature, but really applied and helping in work',
+        'Answers to questions are not consultative in nature, but really applied and helping in work',
       video_url: 'https://www.youtube.com/embed/a7sV13ruZWA',
     },
     {
       id: 3,
       image_url: client3,
-      name: 'Chris Hemsworth',
+      name: 'Eugene Pondanerko',
       description:
-        'In the learning process, gaps are revealed, which you need to work on. I liked speaker presentation, everything was interesting, in detail, examples from practice were given.',
+        'In the learning process, gaps are revealed, which you need to work on. I liked speaker presentation, everything was interesting, in detail,examples from practice were given.',
       video_url: 'https://www.youtube.com/embed/xKFSmazLN4w',
     },
   ];
@@ -119,7 +123,7 @@ const Home: React.FC = () => {
             <a href="#format">Format</a>
             <a href="#gallery">Gallery</a>
             <a href="#reviews">Reviews</a>
-            <a href="#contact">Contact</a>
+            <a href="#contact">Contacts</a>
           </S.Menu>
 
           <S.Phone>
@@ -133,109 +137,135 @@ const Home: React.FC = () => {
           </S.Phone>
         </S.Header>
 
-        <S.Box>
+        <div className="container">
           <S.Franchise>
             <S.FranchiseText>
-              <h1>FRANCHISE FITNESS CLUB</h1>
+              <div className="description">
+                <h1>FRANCHISE FITNESS CLUB</h1>
 
-              <p>
-                Grow your business under the brand, bringing together the
-                largest chain fitness clubs in Russia
-              </p>
+                <p>
+                  Grow your business under the brand, bringing together the
+                  largest chain fitness clubs in Russia
+                </p>
+              </div>
 
               <button type="button">
                 <a href="#about">LEARN MORE</a>
               </button>
 
-              <div>
+              <div className="socialMedias">
                 <a href="#">Instagram</a>
                 <a href="#">Facebook</a>
                 <a href="#">Whatsapp</a>
               </div>
             </S.FranchiseText>
 
-            <div>
+            <S.FranchiseImage>
+              <img src={circles} alt="" />
+
               <img src={WomanFitness} alt="" />
-            </div>
+            </S.FranchiseImage>
 
             <S.FranchiseConfortable>
-              <h3>Confortable Solution</h3>
+              <h2>Confortable Solution</h2>
 
               <p>
                 We offer top open economically profitable sports facility where
                 everything is provided for in detail
               </p>
+
+              {/* <img src={ballStripeOrange} alt="" /> */}
             </S.FranchiseConfortable>
           </S.Franchise>
-        </S.Box>
+        </div>
 
         <S.About id="about">
-          <S.AboutContent>
-            <S.AboutText>
-              <div>
-                <h1>ABOUT</h1>
+          <S.AboutText>
+            <h1>ABOUT</h1>
 
-                <p>
-                  Free Fit is a chain of fitness clubs in a comfortable format,
-                  combining tha leading fitness clubs of the country under its
-                  brand.
-                </p>
+            <p>
+              Free Fit is a chain of fitness clubs in a comfortable format,
+              combining tha leading fitness clubs of the country under its
+              brand.
+            </p>
 
-                <p>
-                  The Free Fit team inspires people to do fitness. Win the main
-                  victory - create the body and spirit of your dreams.
-                </p>
+            <p>
+              The Free Fit team inspires people to do fitness. Win the main
+              victory - create the body and spirit of your dreams.
+            </p>
 
-                <button type="button">
-                  <a href="#format">BUY A FRANCHISE</a>
-                </button>
-              </div>
-            </S.AboutText>
+            <button type="button">
+              <a href="#format">BUY A FRANCHISE</a>
+            </button>
+          </S.AboutText>
 
-            <div>
-              <img src={AboutImage} alt="" />
-            </div>
-          </S.AboutContent>
+          <S.AboutBackgroundMan />
 
-          <S.AboutList>
-            <div>
-              <FiMapPin />
-              <h3>Convenient location</h3>
-              <p>Our clubs are located in easily accessible places</p>
-            </div>
-
-            <div>
-              <GiWeightLiftingUp />
-              <h3>Effective Workouts</h3>
-              <p>Activities with the best trainers of your city</p>
-            </div>
-
-            <div>
-              <MdDirectionsRun />
-              <h3>Modern facilities</h3>
-              <p>The gyms are equipped with the latest sporting requirements</p>
-            </div>
-
-            <div>
-              <GiTakeMyMoney />
-              <h3>Low price</h3>
-              <p>Excellent athletic performance fot little money</p>
-            </div>
-          </S.AboutList>
+          <button type="button" className="btnFranchiseMobile">
+            <a href="#format">BUY A FRANCHISE</a>
+          </button>
         </S.About>
 
-        <S.Box>
-          <S.Board id="format" className="format">
+        <S.AboutList>
+          <div className="blueBackground">
+            <FiMapPin />
+            <h3>Convenient location</h3>
+            <p>Our clubs are located in easily accessible places</p>
+          </div>
+
+          <div className="blueGray">
+            <GiWeightLiftingUp />
+            <h3>Effective Workouts</h3>
+            <p>Activities with the best trainers of your city</p>
+          </div>
+
+          <div className="blueOrange">
+            <MdDirectionsRun />
+            <h3>Modern facilities</h3>
+            <p>The gyms are equipped with the latest sporting requirements</p>
+          </div>
+
+          <div className="blueGray">
+            <GiTakeMyMoney />
+            <h3>Low prices</h3>
+            <p>Excellent athletic performance fot little money</p>
+          </div>
+        </S.AboutList>
+
+        <S.AboutListMobile>
+          <div className="container">
+            <div className="icon">
+              <FiMapPin />
+              <p>Convenient location</p>
+            </div>
+
+            <div className="icon">
+              <GiWeightLiftingUp />
+              <p>Effective Workouts</p>
+            </div>
+          </div>
+
+          <div className="container">
+            <div className="icon">
+              <MdDirectionsRun />
+              <p>Modern facilities</p>
+            </div>
+
+            <div className="icon">
+              <GiTakeMyMoney />
+              <p>Low prices</p>
+            </div>
+          </div>
+        </S.AboutListMobile>
+
+        <div className="container">
+          <S.Board id="format">
             <h1 className="title">Format</h1>
 
-            <div className="description">
-              <p>We offer to open economically profitable</p>
-
-              <p>
-                a sports facility where everything is provided for in every
-                detail
-              </p>
-            </div>
+            <p className="description formatWidth">
+              We offer to open economically profitable a sports facility where
+              everything is provided for in every detail
+            </p>
 
             <S.CardContainer>
               <S.Card>
@@ -244,7 +274,7 @@ const Home: React.FC = () => {
                 <section>
                   <h1>MINI</h1>
 
-                  <p className="area">Area - from 220 m2 to 399 m2</p>
+                  <strong>Area - from 220 m2 to 399 m2</strong>
 
                   <div className="details">
                     <p>Personal Manager Assistance</p>
@@ -269,7 +299,7 @@ const Home: React.FC = () => {
                 <section>
                   <h1>MIDI</h1>
 
-                  <p className="area">Area - from 400 m2 to 799 m2</p>
+                  <strong>Area - from 400 m2 to 799 m2</strong>
 
                   <div className="details">
                     <p>All service in the MINI package</p>
@@ -294,7 +324,7 @@ const Home: React.FC = () => {
                 <section>
                   <h1>MAXI</h1>
 
-                  <p className="area">Area - from 220 m2 to 399 m2</p>
+                  <strong>Area - from 220 m2 to 399 m2</strong>
 
                   <div className="details">
                     <p>Personal Manager Assistance</p>
@@ -302,6 +332,7 @@ const Home: React.FC = () => {
                     <p>Zoning Preparation</p>
                     <p>Quality control of services</p>
                   </div>
+
                   <div className="price">
                     <span>499 990 RUB</span>
 
@@ -313,10 +344,10 @@ const Home: React.FC = () => {
               </S.Card>
             </S.CardContainer>
           </S.Board>
-        </S.Box>
+        </div>
 
-        <S.Box>
-          <S.Board id="gallery">
+        <div className="container">
+          <S.Board id="gallery" className="gallery">
             <h1 className="title">OUR CLUBS</h1>
 
             <div
@@ -387,15 +418,15 @@ const Home: React.FC = () => {
               </Carousel>
             </div>
           </S.Board>
-        </S.Box>
+        </div>
 
-        <S.Box>
-          <S.Board id="reviews">
+        <div className="container">
+          <S.Board id="reviews" className="reviewsClientsPadding">
             <h1 className="title">What Our Clients Say</h1>
 
-            <div className="description">
-              <p>We offer to listen to what our franchises say</p>
-            </div>
+            <p className="description clientsMargin">
+              We offer to listen to what our franchises say
+            </p>
 
             <S.CardVideoContainer>
               {clients.map((item) => (
@@ -403,8 +434,9 @@ const Home: React.FC = () => {
               ))}
             </S.CardVideoContainer>
           </S.Board>
-        </S.Box>
+        </div>
 
+        {/*
         <S.Maps>
           <Map center={initialPosition} zoom={18}>
             <TileLayer
@@ -488,6 +520,7 @@ const Home: React.FC = () => {
             </span>
           </div>
         </S.Footer>
+      */}
       </S.Container>
     </>
   );

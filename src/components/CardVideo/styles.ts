@@ -3,9 +3,18 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
+  text-align: left;
 
   width: 100%;
   height: 100%;
+
+  &:first-child {
+    margin-right: 90px;
+  }
+
+  &:nth-child(2) {
+    margin-right: 85px;
+  }
 
   figure {
     position: relative;
@@ -14,6 +23,7 @@ export const Container = styled.div`
 
     button {
       display: flex;
+      justify-content: center;
       align-items: center;
 
       position: absolute;
@@ -21,48 +31,54 @@ export const Container = styled.div`
       right: 16px;
 
       background: #ff7350;
-      padding: 12px;
-      border-radius: 8px;
+      /* padding: 12px; */
+      width: 45px;
+      height: 45px;
+      border-radius: 10px;
       color: #ffffff;
-      font-weight: 500;
-
-      svg {
-        width: 12px;
-        height: 12px;
-      }
-    }
-  }
-
-  & + div {
-    margin-left: 24px;
-
-    @media (max-width: 900px) {
-      margin-left: 0px;
-      margin-top: 32px;
     }
   }
 
   img {
     width: 100%;
-    height: 256px;
+
+    max-height: 260px;
     object-fit: cover;
   }
 
-  section {
-    margin-top: 8px;
-    text-align: left;
+  h3 {
+    margin: 20px 0;
+    font-size: 24px;
+  }
 
-    @media (max-width: 900px) {
-      text-align: center;
+  p {
+    font-size: 18px;
+  }
+
+  @media (max-width: 900px) {
+    text-align: center;
+
+    & + div {
+      margin-right: 0px;
+      margin-top: 32px;
+    }
+
+    figure {
+      button {
+        width: 37px;
+        height: 37px;
+      }
     }
 
     h3 {
-      margin: 16px 0;
+      margin: 15px 0;
+      font-size: 16px;
     }
-  }
 
-  div {
-    border-radius: 8px;
-    border: 5px solid red;
+    p {
+      padding: 0 15px;
+      font-size: 13px;
+      line-height: 18px;
+    }
   }
 `;
