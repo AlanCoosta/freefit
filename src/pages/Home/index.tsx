@@ -23,7 +23,6 @@ import Logo from '../../assets/logo.svg';
 import phone from '../../assets/phone.svg';
 
 import WomanFitness from '../../assets/fitness.png';
-// import AboutImage from '../../assets/about.jpeg';
 import Mini from '../../assets/mini.jpeg';
 import Midi from '../../assets/midi.jpeg';
 import Maxi from '../../assets/maxi.jpeg';
@@ -37,7 +36,7 @@ import client3 from '../../assets/client3.jpg';
 
 import circles from '../../assets/circles.svg';
 
-// import ballStripeOrange from '../../assets/ball-stripes-orange.png';
+import ballStripeOrange from '../../assets/ball-stripes-orange.png';
 
 import CardVideo from '../../components/CardVideo';
 
@@ -170,11 +169,11 @@ const Home: React.FC = () => {
               <h2>Confortable Solution</h2>
 
               <p>
-                We offer top open economically profitable sports facility where
+                We offer to open economically profitable sports facility where
                 everything is provided for in detail
               </p>
 
-              {/* <img src={ballStripeOrange} alt="" /> */}
+              <img src={ballStripeOrange} alt="" />
             </S.FranchiseConfortable>
           </S.Franchise>
         </div>
@@ -185,7 +184,7 @@ const Home: React.FC = () => {
 
             <p>
               Free Fit is a chain of fitness clubs in a comfortable format,
-              combining tha leading fitness clubs of the country under its
+              combining the leading fitness clubs of the country under its
               brand.
             </p>
 
@@ -228,7 +227,7 @@ const Home: React.FC = () => {
           <div className="blueGray">
             <GiTakeMyMoney />
             <h3>Low prices</h3>
-            <p>Excellent athletic performance fot little money</p>
+            <p>Excellent athletic performance for little money</p>
           </div>
         </S.AboutList>
 
@@ -279,7 +278,7 @@ const Home: React.FC = () => {
                   <div className="details">
                     <p>Personal Manager Assistance</p>
                     <p>Help in recruiting</p>
-                    <p> Zoning Preparation</p>
+                    <p>Zoning Preparation</p>
                     <p>Quality control of services</p>
                   </div>
 
@@ -324,17 +323,17 @@ const Home: React.FC = () => {
                 <section>
                   <h1>MAXI</h1>
 
-                  <strong>Area - from 220 m2 to 399 m2</strong>
+                  <strong>Area - from 800 m2</strong>
 
                   <div className="details">
-                    <p>Personal Manager Assistance</p>
-                    <p>Help in recruiting</p>
-                    <p>Zoning Preparation</p>
-                    <p>Quality control of services</p>
+                    <p>All services in the MIDI package</p>
+                    <p>Using Free fit discounts</p>
+                    <p>Internship and staff training</p>
+                    <p>Consultation at all stages</p>
                   </div>
 
                   <div className="price">
-                    <span>499 990 RUB</span>
+                    <span>899 990 RUB</span>
 
                     <button type="button">
                       <FiChevronRight />
@@ -422,10 +421,10 @@ const Home: React.FC = () => {
 
         <div className="container">
           <S.Board id="reviews" className="reviewsClientsPadding">
-            <h1 className="title">What Our Clients Say</h1>
+            <h1 className="title">WHAT OUR CLIENTS SAY</h1>
 
             <p className="description clientsMargin">
-              We offer to listen to what our franchises say
+              We offer to listen to what our franchisees say
             </p>
 
             <S.CardVideoContainer>
