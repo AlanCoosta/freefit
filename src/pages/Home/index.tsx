@@ -23,7 +23,7 @@ import Logo from '../../assets/logo.svg';
 import phone from '../../assets/phone.svg';
 
 import WomanFitness from '../../assets/fitness.png';
-import AboutImage from '../../assets/about.jpeg';
+// import AboutImage from '../../assets/about.jpeg';
 import Mini from '../../assets/mini.jpeg';
 import Midi from '../../assets/midi.jpeg';
 import Maxi from '../../assets/maxi.jpeg';
@@ -37,7 +37,7 @@ import client3 from '../../assets/client3.jpg';
 
 import circles from '../../assets/circles.svg';
 
-import ballStripeOrange from '../../assets/ball-stripes-orange.png';
+// import ballStripeOrange from '../../assets/ball-stripes-orange.png';
 
 import CardVideo from '../../components/CardVideo';
 
